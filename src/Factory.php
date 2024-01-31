@@ -9,7 +9,7 @@ use PhpCsFixer\Config;
 class Factory
 {
     public static function create(
-        ?array $directories = null,
+        array $directories,
         ?string $phpVersion = null,
     ): Config {
         $defaultRuleSet = new AirlstRuleset($phpVersion);
@@ -21,7 +21,7 @@ class Factory
             ->setUsingCache(true);
 
         $config->getFinder()
-            ->in($directories ?? ['app', 'config', 'database', 'routes', 'tests'])
+            ->in($directories)
             ->name('*.php')
             ->notName('*.blade.php')
             ->ignoreDotFiles(true)

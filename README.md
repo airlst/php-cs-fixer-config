@@ -22,26 +22,10 @@ Create a `.php-cs-fixer.php` in the root of your project with the following cont
 
 declare(strict_types=1);
 
-return Airlst\PhpCsFixerConfig\Factory::create();
+return Airlst\PhpCsFixerConfig\Factory::create(['src', 'tests']);
 ```
 
-By default, it uses the following folders to scan and fix PHP files:
-
-- `app`
-- `config`
-- `database`
-- `routes`
-- `tests`
-
-If can override these folders by passing an array of folders to the `create()` method:
-
-```php
-<?php
-
-declare(strict_types=1);
-
-return Airlst\PhpCsFixerConfig\Factory::create(['app', 'tests']);
-```
+The first argument of the `create()` method is an array of paths to be scanned for PHP files and fixed. You can pass any number of paths to it.
 
 By default, it uses PHP 8.3 as the target version. You can override this by passing the target version as the second argument to the `create()` method:
 
@@ -50,7 +34,7 @@ By default, it uses PHP 8.3 as the target version. You can override this by pass
 
 declare(strict_types=1);
 
-return Airlst\PhpCsFixerConfig\Factory::create(['app', 'tests'], '8.2');
+return Airlst\PhpCsFixerConfig\Factory::create(['src', 'tests'], '8.2');
 ```
 
 Only PHP 8.2 and 8.3 are supported.
