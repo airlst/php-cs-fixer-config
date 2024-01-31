@@ -1,0 +1,39 @@
+{
+    "name": "airlst/php-cs-fixer-config",
+    "description": "PHP CS Fixer config for AirLST projects",
+    "keywords": [
+        "airlst",
+        "php-cs-fixer",
+        "php-cs-fixer-config"
+    ],
+    "homepage": "https://github.com/airlst/php-cs-fixer-config",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Orkhan Ahmadov",
+            "email": "hey@orkhan.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.48",
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Airlst\\PhpCsFixerConfig\\": "src"
+        }
+    },
+    "scripts": {
+        "cs-fixer": [
+            "./vendor/bin/php-cs-fixer fix --verbose --config=.php-cs-fixer.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
