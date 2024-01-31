@@ -17,9 +17,7 @@
         }
     ],
     "require": {
-        "php": "^8.2"
-    },
-    "require-dev": {
+        "php": "^8.2",
         "friendsofphp/php-cs-fixer": "^3.48"
     },
     "autoload": {
