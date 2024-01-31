@@ -2,13 +2,12 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/airlst/php-cs-fixer-config.svg?style=flat-square)](https://packagist.org/packages/airlst/php-cs-fixer-config)
 [![Total Downloads](https://img.shields.io/packagist/dt/airlst/php-cs-fixer-config.svg?style=flat-square)](https://packagist.org/packages/airlst/php-cs-fixer-config)
-![GitHub Actions](https://github.com/airlst/php-cs-fixer-config/actions/workflows/main.yml/badge.svg)
 
 PHP CS Fixer config for AirLST projects.
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via Composer:
 
 ```bash
 composer require --dev airlst/php-cs-fixer-config
