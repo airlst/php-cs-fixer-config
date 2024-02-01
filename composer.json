@@ -18,7 +18,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "friendsofphp/php-cs-fixer": "^3.48"
+        "friendsofphp/php-cs-fixer": "3.48.0"
     },
     "require-dev": {
         "airlst/rector-config": "^1.0"
