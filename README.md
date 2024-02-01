@@ -24,7 +24,7 @@ declare(strict_types=1);
 
 $factory = new Airlst\PhpCsFixerConfig\Factory(['src', 'tests']);
 
-$factory->create();
+return $factory->create();
 ```
 
 The constructor of the `Factory` class takes an array of paths to be scanned for PHP files and fixed. You can pass any number of paths to it.
@@ -40,7 +40,7 @@ declare(strict_types=1);
 
 $factory = new Airlst\PhpCsFixerConfig\Factory(['src', 'tests']);
 
-$factory->php82()->create();
+return $factory->php82()->create();
 ```
 
 Only PHP 8.2 and 8.3 are supported.
