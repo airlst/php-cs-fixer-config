@@ -6,7 +6,7 @@ namespace Airlst\PhpCsFixerConfig;
 
 use PhpCsFixer\RuleSet\RuleSetDescriptionInterface;
 
-class AirlstRuleset implements RuleSetDescriptionInterface
+readonly class AirlstRuleset implements RuleSetDescriptionInterface
 {
     private string $phpMigration;
 
