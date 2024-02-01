@@ -12,11 +12,11 @@ class Factory
         array $directories,
         ?string $phpVersion = null,
     ): Config {
-        $defaultRuleSet = new AirlstRuleset($phpVersion);
+        $ruleSet = new AirlstRuleset($phpVersion);
 
-        $config = new Config($defaultRuleSet->getName());
+        $config = new Config($ruleSet->getName());
 
-        $config->setRules($defaultRuleSet->getRules())
+        $config->setRules($ruleSet->getRules())
             ->setRiskyAllowed(true)
             ->setUsingCache(true);
 
