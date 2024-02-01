@@ -2,6 +2,10 @@
 
 All notable changes to `php-cs-fixer-config` will be documented in this file
 
+## 1.1.0 - 2024-02-01
+
+- Refactor config factory
+
 ## 1.0.2 - 2024-01-31
 
 - Factory config update

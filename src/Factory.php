@@ -8,11 +8,20 @@ use PhpCsFixer\Config;
 
 class Factory
 {
-    public static function create(
-        array $directories,
-        ?string $phpVersion = null,
-    ): Config {
-        $ruleSet = new AirlstRuleset($phpVersion);
+    private string $phpVersion = '8.3';
+
+    public function __construct(private array $directories) {}
+
+    public function php82(): self
+    {
+        $this->phpVersion = '8.2';
+
+        return $this;
+    }
+
+    public function create(): Config
+    {
+        $ruleSet = new AirlstRuleset($this->phpVersion);
 
         $config = new Config($ruleSet->getName());
 
@@ -21,7 +30,7 @@ class Factory
             ->setUsingCache(true);
 
         $config->getFinder()
-            ->in($directories)
+            ->in($this->directories)
             ->name('*.php')
             ->notName('*.blade.php')
             ->ignoreDotFiles(true)

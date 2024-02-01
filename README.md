@@ -22,22 +22,36 @@ Create a `.php-cs-fixer.php` in the root of your project with the following cont
 
 declare(strict_types=1);
 
-return Airlst\PhpCsFixerConfig\Factory::create(['src', 'tests']);
+$factory = new Airlst\PhpCsFixerConfig\Factory(['src', 'tests']);
+
+$factory->create();
 ```
 
-The first argument of the `create()` method is an array of paths to be scanned for PHP files and fixed. You can pass any number of paths to it.
+The constructor of the `Factory` class takes an array of paths to be scanned for PHP files and fixed. You can pass any number of paths to it.
 
-By default, it uses PHP 8.3 as the target version. You can override this by passing the target version as the second argument to the `create()` method:
+### PHP 8.2 support
+
+By default, it uses PHP 8.3 as the target version. You can switch to PHP 8.2 by calling the `php82()` method on the factory object:
 
 ```php
 <?php
 
 declare(strict_types=1);
 
-return Airlst\PhpCsFixerConfig\Factory::create(['src', 'tests'], '8.2');
+$factory = new Airlst\PhpCsFixerConfig\Factory(['src', 'tests']);
+
+$factory->php82()->create();
 ```
 
 Only PHP 8.2 and 8.3 are supported.
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## License
 

@@ -2,4 +2,6 @@
 
 declare(strict_types=1);
 
-return Airlst\PhpCsFixerConfig\Factory::create(['src']);
+$factory = new Airlst\PhpCsFixerConfig\Factory(['src']);
+
+return $factory->php82()->create();
