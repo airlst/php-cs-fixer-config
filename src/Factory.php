@@ -10,6 +10,9 @@ class Factory
 {
     private string $phpVersion = '8.3';
 
+    /** @var array<string, array<string, mixed>|bool> */
+    private array $customRules = [];
+
     /** @param array<string> $directories */
     public function __construct(private readonly array $directories) {}
 
@@ -20,13 +23,26 @@ class Factory
         return $this;
     }
 
+    /** @param array<string, array<string, mixed>|bool> $customRules */
+    public function customRules(array $customRules): self
+    {
+        $this->customRules = $customRules;
+
+        return $this;
+    }
+
     public function create(): Config
     {
-        $ruleSet = new AirlstRuleset($this->phpVersion);
+        $ruleset = new AirlstRuleset($this->phpVersion);
 
-        $config = new Config($ruleSet->getName());
+        $rules = [
+            ...$ruleset->getRules(),
+            ...$this->customRules,
+        ];
 
-        $config->setRules($ruleSet->getRules())
+        $config = new Config($ruleset->getName());
+
+        $config->setRules($rules)
             ->setRiskyAllowed(true)
             ->setUsingCache(true);
 

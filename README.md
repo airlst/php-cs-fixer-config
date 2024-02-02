@@ -53,6 +53,26 @@ return $factory->php82()->create();
 
 Only PHP 8.2 and 8.3 are supported.
 
+### Custom rules
+
+You can provide custom rules to the configuration by calling the `customRules` method on the factory object.
+It will add or override the existing rules provided by the factory.
+
+```php
+<?php
+
+declare(strict_types=1);
+
+$factory = new Airlst\PhpCsFixerConfig\Factory(['src', 'tests']);
+
+return $factory
+    ->customRules([
+        'static_lambda' => true,
+        'no_null_property_initialization' => false,
+    ])
+    ->create();
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.

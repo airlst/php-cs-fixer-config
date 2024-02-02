@@ -2,6 +2,10 @@
 
 All notable changes to `php-cs-fixer-config` will be documented in this file
 
+## 1.2.0 - 2024-02-02
+
+- Added `customRules` method
+
 ## 1.1.2 - 2024-02-02
 
 - Dependency update

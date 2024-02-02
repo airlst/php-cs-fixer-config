@@ -21,8 +21,8 @@
         "friendsofphp/php-cs-fixer": "3.49.0"
     },
     "require-dev": {
-        "airlst/phpstan-config": "^1.0",
-        "airlst/rector-config": "^1.0",
+        "airlst/phpstan-config": "^1.0.1",
+        "airlst/rector-config": "^1.0.2",
         "ergebnis/composer-normalize": "^2.42"
     },
     "autoload": {
