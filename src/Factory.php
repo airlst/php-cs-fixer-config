@@ -10,6 +10,7 @@ class Factory
 {
     private string $phpVersion = '8.3';
 
+    /** @param array<string> $directories */
     public function __construct(private readonly array $directories) {}
 
     public function php82(): self

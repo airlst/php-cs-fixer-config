@@ -29,6 +29,14 @@ return $factory->create();
 
 The constructor of the `Factory` class takes an array of paths to be scanned for PHP files and fixed. You can pass any number of paths to it.
 
+### Running CS Fixer
+
+Run CS Fixer with the following command:
+
+```shell
+./vendor/bin/php-cs-fixer fix
+```
+
 ### PHP 8.2 support
 
 By default, it uses PHP 8.3 as the target version. You can switch to PHP 8.2 by calling the `php82()` method on the factory object:
