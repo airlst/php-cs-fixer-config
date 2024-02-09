@@ -22,7 +22,7 @@
     },
     "require-dev": {
         "airlst/phpstan-config": "^1.0.1",
-        "airlst/rector-config": "^1.0.2",
+        "airlst/rector-config": "^2.0.0",
         "ergebnis/composer-normalize": "^2.42"
     },
     "autoload": {
