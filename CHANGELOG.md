@@ -2,6 +2,10 @@
 
 All notable changes to `php-cs-fixer-config` will be documented in this file
 
+## 1.3.0 - 2024-03-19
+
+- Update deprecated rules
+
 ## 1.2.3 - 2024-03-19
 
 - Updated `friendsofphp/php-cs-fixer` to version 3.52.0
