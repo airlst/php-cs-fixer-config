@@ -2,6 +2,11 @@
 
 All notable changes to `php-cs-fixer-config` will be documented in this file
 
+## 2.0.0 - 2024-05-18
+
+- Updated `friendsofphp/php-cs-fixer` to version 3.57.1
+- Uses parallel mode by default
+
 ## 1.5.0 - 2024-05-08
 
 - Updated `friendsofphp/php-cs-fixer` to version 3.56.0

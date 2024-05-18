@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Airlst\PhpCsFixerConfig;
 
 use PhpCsFixer\Config;
+use PhpCsFixer\Runner\Parallel\ParallelConfigFactory;
 
 class Factory
 {
@@ -42,7 +43,9 @@ class Factory
 
         $config = new Config($ruleset->getName());
 
-        $config->setRules($rules)
+        $config
+            ->setParallelConfig(ParallelConfigFactory::detect())
+            ->setRules($rules)
             ->setRiskyAllowed(true)
             ->setUsingCache(true);
 
