@@ -18,11 +18,11 @@
     "homepage": "https://github.com/airlst/php-cs-fixer-config",
     "require": {
         "php": "^8.2",
-        "friendsofphp/php-cs-fixer": "3.62.0"
+        "friendsofphp/php-cs-fixer": "3.64.0"
     },
     "require-dev": {
-        "airlst/phpstan-config": "^8.0.0",
-        "airlst/rector-config": "^4.3.3",
+        "airlst/phpstan-config": "^8.1.0",
+        "airlst/rector-config": "^4.3.5",
         "ergebnis/composer-normalize": "^2.43"
     },
     "autoload": {

@@ -2,6 +2,10 @@
 
 All notable changes to `php-cs-fixer-config` will be documented in this file
 
+## 2.6.0 - 2024-09-03
+
+- Updated `friendsofphp/php-cs-fixer` to version 3.64.0
+
 ## 2.5.0 - 2024-08-13
 
 - Updated `friendsofphp/php-cs-fixer` to version 3.62.0
