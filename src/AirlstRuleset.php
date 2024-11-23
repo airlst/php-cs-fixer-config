@@ -12,7 +12,11 @@ readonly class AirlstRuleset implements RuleSetDescriptionInterface
 
     public function __construct(?string $phpVersion = null)
     {
-        $this->phpMigration = $phpVersion === '8.2' ? '@PHP82Migration' : '@PHP83Migration';
+        $this->phpMigration = match ($phpVersion) {
+            '8.2' => '@PHP82Migration',
+            '8.3' => '@PHP83Migration',
+            default => '@PHP84Migration',
+        };
     }
 
     public function getRules(): array

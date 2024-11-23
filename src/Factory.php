@@ -24,6 +24,13 @@ class Factory
         return $this;
     }
 
+    public function php83(): self
+    {
+        $this->phpVersion = '8.3';
+
+        return $this;
+    }
+
     /** @param array<string, array<string, mixed>|bool> $customRules */
     public function customRules(array $customRules): self
     {

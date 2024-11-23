@@ -37,9 +37,9 @@ Run CS Fixer with the following command:
 ./vendor/bin/php-cs-fixer fix
 ```
 
-### PHP 8.2 support
+### PHP 8.3 and 8.2 support
 
-By default, it uses PHP 8.3 as the target version. You can switch to PHP 8.2 by calling the `php82()` method on the factory object:
+By default, it uses PHP 8.4 as the target version. You can switch to PHP 8.3 or PHP 8.2 by calling the `php83()` or `php82()` method on the factory object:
 
 ```php
 <?php
@@ -48,10 +48,10 @@ declare(strict_types=1);
 
 $factory = new Airlst\PhpCsFixerConfig\Factory(['src', 'tests']);
 
-return $factory->php82()->create();
+return $factory->php83()->create(); // uses php 8.3 setting
 ```
 
-Only PHP 8.2 and 8.3 are supported.
+Only PHP 8.2, 8.3 and 8.4 are supported.
 
 ### Custom rules
 

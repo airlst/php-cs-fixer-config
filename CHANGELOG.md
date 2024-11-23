@@ -2,6 +2,11 @@
 
 All notable changes to `php-cs-fixer-config` will be documented in this file
 
+## 3.0.0 - 2024-11-23
+
+- Added `@PHP84Migration` ruleset and enabled by default
+- Added `php83()` method to `\Airlst\PhpCsFixerConfig\Factory` to allow using PHP 8.3 ruleset
+
 ## 2.6.0 - 2024-09-03
 
 - Updated `friendsofphp/php-cs-fixer` to version 3.64.0
