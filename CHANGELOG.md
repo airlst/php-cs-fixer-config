@@ -2,6 +2,10 @@
 
 All notable changes to `php-cs-fixer-config` will be documented in this file
 
+## 3.1.0 - 2024-11-25
+
+- Updated `friendsofphp/php-cs-fixer` to version 3.65.0
+
 ## 3.0.0 - 2024-11-23
 
 - Added `@PHP84Migration` ruleset and enabled by default
