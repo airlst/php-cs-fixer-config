@@ -18,7 +18,7 @@
     "homepage": "https://github.com/airlst/php-cs-fixer-config",
     "require": {
         "php": "^8.2",
-        "friendsofphp/php-cs-fixer": "3.64.0"
+        "friendsofphp/php-cs-fixer": "3.65.0"
     },
     "require-dev": {
         "airlst/phpstan-config": "^10.0.2",

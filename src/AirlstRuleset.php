@@ -23,7 +23,7 @@ readonly class AirlstRuleset implements RuleSetDescriptionInterface
     {
         return [
             $this->phpMigration => true,
-            '@PHP80Migration:risky' => true,
+            '@PHP82Migration:risky' => true,
             '@PSR12:risky' => true,
             '@PHPUnit100Migration:risky' => true,
 
