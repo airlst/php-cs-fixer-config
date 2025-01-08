@@ -18,12 +18,12 @@
     "homepage": "https://github.com/airlst/php-cs-fixer-config",
     "require": {
         "php": "^8.2",
-        "friendsofphp/php-cs-fixer": "3.65.0"
+        "friendsofphp/php-cs-fixer": "3.67.0"
     },
     "require-dev": {
         "airlst/phpstan-config": "^10.0.2",
         "airlst/rector-config": "^4.3.12",
-        "ergebnis/composer-normalize": "^2.44"
+        "ergebnis/composer-normalize": "^2.45"
     },
     "autoload": {
         "psr-4": {
@@ -44,7 +44,7 @@
             "@cs-fixer",
             "@phpstan"
         ],
-        "cs-fixer": "./vendor/bin/php-cs-fixer fix",
+        "cs-fixer": "PHP_CS_FIXER_IGNORE_ENV=1 ./vendor/bin/php-cs-fixer fix",
         "phpstan": "./vendor/bin/phpstan analyse -c phpstan.php",
         "rector": "./vendor/bin/rector"
     }
