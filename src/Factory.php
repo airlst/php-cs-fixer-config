@@ -11,11 +11,22 @@ class Factory
 {
     private string $phpVersion = '8.3';
 
+    /** @var array<string> */
+    private array $excludeDirectories = [];
+
     /** @var array<string, array<string, mixed>|bool> */
     private array $customRules = [];
 
     /** @param array<string> $directories */
     public function __construct(private readonly array $directories) {}
+
+    /** @param array<string> $directories */
+    public function excludeDirectories(array $directories): static
+    {
+        $this->excludeDirectories = $directories;
+
+        return $this;
+    }
 
     public function php82(): self
     {
@@ -60,6 +71,7 @@ class Factory
             ->in($this->directories)
             ->name('*.php')
             ->notName('*.blade.php')
+            ->notPath($this->excludeDirectories)
             ->ignoreDotFiles(true)
             ->ignoreVCS(true);
 

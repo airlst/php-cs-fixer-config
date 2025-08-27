@@ -2,6 +2,11 @@
 
 All notable changes to `php-cs-fixer-config` will be documented in this file
 
+## 3.7.0 - 2025-08-27
+
+- Added `excludeDirectories()` method to Factory
+- Updated `friendsofphp/php-cs-fixer` to version 3.86.0
+
 ## 3.6.0 - 2025-03-31
 
 - Updated `friendsofphp/php-cs-fixer` to version 3.75.0
