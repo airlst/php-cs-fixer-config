@@ -53,6 +53,20 @@ return $factory->php83()->create(); // uses php 8.3 setting
 
 Only PHP 8.2, 8.3 and 8.4 are supported.
 
+### Exclude directories
+
+`excludeDirectories()` method can be used to exclude list of directories. Accepts array.
+
+```php
+<?php
+
+declare(strict_types=1);
+
+$factory = new Airlst\PhpCsFixerConfig\Factory(['src', 'tests']);
+
+return $factory->excludeDirectories(['src/example_directory', 'src/example_directory_2'])->create();
+```
+
 ### Custom rules
 
 You can provide custom rules to the configuration by calling the `customRules` method on the factory object.
